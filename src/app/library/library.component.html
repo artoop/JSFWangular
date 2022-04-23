@@ -1,0 +1,9 @@
+<div class="library">
+    <div class="button-group">
+        <button (click)="onPrevious()"><</button>
+        <button (click)="onBookSelected(i)" [ngClass]="{active:(i === selectedBookIndex)}" *ngFor="let book of books; let i = index">{{ book.title }}</button>
+        <button (click)="onNext()">></button>
+    </div>
+    <app-book-detail [book]="books[selectedBookIndex]"></app-book-detail>
+
+</div>

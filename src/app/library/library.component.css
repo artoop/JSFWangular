@@ -1,0 +1,46 @@
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.library {
+    flex-direction: column;
+    display: flex;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+}
+
+.active {
+    font-weight: bolder;
+}
+
+button {
+    background: none; 
+    border: none;
+}
+
+button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
+
+.nav button {
+    font-size: large;
+}
+
+.nav button:hover {
+    transform: scale(1.5);
+}

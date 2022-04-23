@@ -1,0 +1,24 @@
+<div  class="book-container">
+    <div *ngIf="book != null">
+        <div class="book-header">
+            <div class="image">
+                <img src="{{ book.image }}" alt="{{ book.title }} book cover">
+            </div>
+            <div>
+                <div>
+                    <strong>{{ book.title }}</strong>
+                </div>
+                <div>
+                   por {{ book.author }}
+                </div>
+            </div>
+        </div>
+        <div>
+            {{ book.description }}
+        </div>
+    </div>
+    <div *ngIf="book == null" class="placeholder">Selecione uma das opcoes</div>
+    
+    
+    
+</div>
