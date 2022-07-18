@@ -1,0 +1,48 @@
+
+<form [formGroup]="form" (ngSubmit)="save()"  class="library">
+    <div *ngIf="!open">
+        <button (click)="openBox()">Adicionar Livro</button>
+    </div>
+    <div class="book-container" *ngIf="open">
+        <div>
+            <div class="input-group">
+                <div class="label">Titulo</div>
+                <input type="text" formControlName="title">
+            </div>
+            <div class="error" *ngIf="form.get('title').status != 'VALID' && form.get('title').errors['required'] && form.get('title').touched">
+                Campo obrigatorio
+            </div>
+        </div>
+        <div>
+            <div class="input-group">
+                <div class="label">Descricao</div>
+                <input type="text" formControlName="description">
+            </div>
+            <div class="error" *ngIf="form.get('description').status != 'VALID' && form.get('description').errors['required'] && form.get('description').touched">
+                Campo obrigatorio
+            </div>
+        </div>
+        <div>
+            <div class="input-group">
+                <div class="label">Autor</div>
+                <input type="text" formControlName="author">
+            </div>
+            <div class="error" *ngIf="form.get('author').status != 'VALID' && form.get('author').errors['required'] && form.get('author').touched">
+                Campo obrigatorio
+            </div>
+        </div>
+        <div>
+            <div class="input-group">
+                <div class="label">Imagem</div>
+                <input type="text" formControlName="image">
+            </div>
+            <div class="error" *ngIf="form.get('image').status != 'VALID' && form.get('image').errors['required'] && form.get('image').touched">
+                Campo obrigatorio
+            </div>
+        </div>
+        <div class="button-group">
+            <button type="submit">Salvar</button>  
+            <button (click)="reset()">Cancelar</button>
+        </div>
+    </div>
+</form>
